@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>StayGreen</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script>
+	function Average ()
+
+	{
+    
+		//document.write("\nHello, Coding Ground!");
+    
+		gs_tp = document.getElementById("gs1").value;
+		gs_tw = document.getElementById("gs2").value;
+		gs_kw = document.getElementById("gs3").value;
+		gs_pu = document.getElementById("gs4").value;
+		//document.writeln(gs_tp,",");
+
+		//document.writeln(gs_tw,",");
+
+		//document.writeln(gs_kw,",");
+
+		//document.writeln(gs_pu,",");
+
+
+		//gs_tp=10;
+		if(gs_tp == 0){
+		gs1 = -100}
+		else{
+		gs1=(gs_tp/7)*100;
+}   
+		//document.writeln(gs1,",");
+    
+		if(gs_tw=='Yes')
+    
+		{
+        gs2=100;
+    }
+    
+		else
+    
+		{
+        gs2=-100;
+    }
+    
+		//document.writeln(gs2,",");
+		if(gs_kw == 0){
+		gs3 = -100}
+		else{
+    
+		gs3=((gs_kw/35)*100);
+   } 
+		//document.writeln(gs3,",");
+    
+		if(gs_pu=='No')
+    
+		{
+        gs4=-100;
+    }
+    
+		else if(gs_pu=='Yes')
+    
+		{
+        gs4=100;
+    }
+    
+		else
+    
+		{
+        gs4=50;
+    }
+    
+		//document.writeln(gs4,",");
+    
+		gs=((gs1+gs2+gs3+gs4)/4);
+
+		gs= (gs/52).toFixed(2);
+    
+		//document.write(gs);
+
+		//parseFloat(yourString).toFixed(2)
+		document.getElementById("gs").innerHTML = "Your Green Score: "+gs;
+		}
+
+		
+	</script>
+	<style media="screen">
+		body {
+    background-image: url('img/bg-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% center;
+    background-attachment: fixed;
+	}
+	.outer{
+		display: table-cell;
+		width: 100vw;
+		height: 100vh;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.inner{
+    	display: inline-block;
+	}
+	.sub-body{
+		background-color: white;
+		opacity: 0.8;
+	}
+</style>
+</head>
+
+<body>
+	<div class="outer" align="center">
+		<div class="sub-body inner">
+			<div class="row" style="background:transparent url('img\bg-image.png') no-repeat center center /cover; margin-left: 0px;margin-right: 0px;">
+
+				<div>
+					<form action="" class="greenForm" id="greenForm">
+						<div class="rows" style=" color: white;background-color: #417505; padding: 10px; ">
+							<div class="title1">
+								<h3>StayGreen</h3>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="question" style ="text-align: left;">
+									<h5>&nbsp;How many saplings did you plant this &nbsp;week?</h5>
+									<form>
+										&nbsp;<select name="sapling" class="custom-select-sm" id = "gs1">
+											<option value="0" selected>0</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+										</select>
+									</form>
+									</br></br>
+										<h5>&nbsp;How many KMS you walked and saved &nbsp;fuel?</h5>
+								<form ></br>
+									&nbsp;<select name="fuel" class="custom-select-sm" id = "gs3">
+										<option value="0" selected>0</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+										<option value="30">30</option>
+										<option value="31">31</option>
+										<option value="32">32</option>
+										<option value="33">33</option>
+										<option value="34">34</option>
+										<option value="35">35</option>
+									</select>
+								</form>
+								</div>
+							</div>
+						
+							<div class="col-md-6"><div class="question" style ="text-align: left;">
+							
+								<h5>Did you water the Saplings you planted?</h5>
+										<form>
+										&nbsp;<select name="sapling" class="custom-select-sm" id = "gs2">
+											<option value="Yes">Yes</option>
+											<option value="No" selected>No</option>
+											
+										</select>
+									</form>
+								</br></br></br>
+								<h5>Did you avoid using plastic?</h5>
+								<div class="form-check-inline" style =" font-weight:bold;">
+									<form>
+										&nbsp;<select name="sapling" class="custom-select-sm" id = "gs4">
+											<option value="Yes">Yes</option>
+											<option value="No" selected>No</option>
+											<option value="Almost">Almost</option>											
+										</select>
+									</form>
+								</div>
+							</div></div>
+						</div>
+				
+			</br>
+			<div >
+				<div class="button1  btn-lg" style="text-align: center; margin-right: 35px;"> 
+					<button type="button" id = "gs" onclick="Average()" style ="margin-right: 35px;color: white;background-color: #417505;font-weight:bold;">Get Green Score</button>
+				</div>
+			</div>
+		
+				<div class ="score" style ="text-align:Left;">
+									
+					<!--<div class="col-md-12">
+						<p style="font-weight:bold;font-size:25px; color:#417505">Your Score</p>
+					</div>					
+					<div class="col-md-12">
+						</br> <p style="font-weight:bold; font-size:20px; color:#417505"> gs </p>
+					</div> -->
+					<div class="progress" >
+						<div class="progress-bar bg-white" style="width:10%"></div>
+						<!--<div class="progress-bar bg-danger" style="width:20%"><b>-100 to -50</b></div>
+						<div class="progress-bar bg-warning" style="width:20%"><b>-51% to 0</b></div>
+						<div class="progress-bar" style="width:20%;background-color:#7CFC00"><b>1% to 50%</b></div>
+						<div class="progress-bar bg-success" style="width:20%"><b>51% to 100%</b></div> -->
+						<div class="progress-bar bg-danger" style="width:20%;text-align:Left;"><b>&nbsp;-100</b></div>
+						<div class="progress-bar bg-warning" style="width:20%;text-align:Left;"><b>&nbsp;-51</b></div>
+						<div class="progress-bar" style="width:20%;background-color:#7CFC00;text-align:Left;"><b>&nbsp;0</b></div>
+						<div class="progress-bar bg-success" style="width:20%;text-align:Left;"><b>&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100</b></div>
+						<div class="progress-bar bg-white" style="width:10%"></div>
+					</div>
+					</div>
+					
+					
+				</br></div>
+		</div>
+		</form>
+	</div>
+	</div>
+	</div>
+
+</body>
+
+</html>
